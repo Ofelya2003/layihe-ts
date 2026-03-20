@@ -1,0 +1,55 @@
+import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
+import type { MovieType } from "../../types";
+
+interface CartState {
+  items: (MovieType & { quantity: number })[];
+}
+
+const savedCart = localStorage.getItem("cart");
+
+const initialState: CartState = {
+  items: savedCart ? JSON.parse(savedCart) : [],
+};
+
+const cartSlice = createSlice({
+  name: "cart",
+  initialState,
+  reducers: {
+    addToCart: (state, action: PayloadAction<MovieType>) => {
+      const itemExists = state.items.find((item) => item.id === action.payload.id);
+      if (itemExists) {
+        itemExists.quantity++;
+      } else {
+        state.items.push({ ...action.payload, quantity: 1 });
+      }
+      localStorage.setItem("cart", JSON.stringify(state.items));
+    },
+    
+    decreaseQuantity: (state, action: PayloadAction<number>) => {
+      const item = state.items.find((i) => i.id === action.payload);
+      if (item) {
+        if (item.quantity > 1) {
+          item.quantity--;
+        } else {
+          state.items = state.items.filter((i) => i.id !== action.payload);
+        }
+      }
+      localStorage.setItem("cart", JSON.stringify(state.items));
+    },
+
+    removeFromCart: (state, action: PayloadAction<number>) => {
+      state.items = state.items.filter((item) => item.id !== action.payload);
+      localStorage.setItem("cart", JSON.stringify(state.items));
+    },
+
+    clearCart: (state) => {
+      state.items = [];
+      localStorage.removeItem("cart");
+    },
+  },
+});
+
+
+
+export const { addToCart, removeFromCart, clearCart, decreaseQuantity } = cartSlice.actions;
+export default cartSlice.reducer;

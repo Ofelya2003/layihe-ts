@@ -1,0 +1,63 @@
+
+.not-found-fullscreen-pixar {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.sadness-char-img {
+    width: 300px; 
+    height: auto;
+    filter: none; 
+    transition: transform 0.3s;
+}
+
+.sadness-char-img:hover {
+    transform: scale(1.05);
+}
+
+.pixar-404-text {
+    max-width: 500px;
+}
+
+.pixar-404-main {
+    font-size: 42px; 
+    font-weight: 700;
+    color: #111;
+}
+
+.pixar-404-sub {
+    font-size: 16px;
+    font-weight: 600;
+    color: #777;
+    letter-spacing: 1px;
+}
+
+.pixar-404-desc {
+    font-size: 17px;
+    color: #555;
+    line-height: 1.8;
+}
+
+.pixar-btn-back {
+    background: transparent;
+    border: 1px solid #fd6500;
+    color: #fd6500;
+    font-weight: 800;
+    font-size: 14px;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.pixar-btn-back:hover {
+    background: #fd6500;
+    color: #fff;
+    box-shadow: 0 0 30px rgba(253, 101, 0, 0.2);
+}
+
+@media (max-width: 992px) {
+    .content-404-pixar { flex-direction: column; text-align: center; gap: 30px; }
+    .sadness-char-img { width: 220px; }
+    .pixar-404-main { font-size: 32px; }
+    .pixar-404-text { text-align: center; max-width: 100%; }
+}

@@ -1,0 +1,83 @@
+
+.filming-experience-wrapper {
+    padding: 100px 0;
+    background-color: #ffffff;
+}
+
+.img-holder {
+    overflow: hidden;
+    border-radius: 2px;
+}
+
+.main-holder {
+    height: 550px; 
+}
+
+.side-holder {
+    height: 263px; 
+}
+
+.img-holder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.orange-line-short {
+    width: 45px;
+    height: 2px;
+    background-color: #fd6500;
+}
+
+.label-text {
+    color: #fd6500;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.main-display-title {
+    font-size: 52px; 
+    font-weight: 900;
+    color: #000000;
+    line-height: 1.1;
+    letter-spacing: -1px;
+}
+
+.desc-text {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #555555;
+    font-weight: 400;
+}
+
+.btn-orange-action {
+    background-color: #fd6500;
+    color: white;
+    padding: 18px 45px;
+    border: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: 0.3s all ease;
+    border-radius: 0; 
+}
+
+.btn-orange-action:hover {
+    background-color: #000;
+    transform: translateY(-5px);
+}
+
+@media (max-width: 991px) {
+    .main-display-title {
+        font-size: 38px;
+    }
+    .main-holder {
+        height: 400px;
+    }
+    .side-holder {
+        height: 190px;
+    }
+}

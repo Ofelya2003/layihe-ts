@@ -1,0 +1,86 @@
+.checkout-wrapper {
+    background-color: #000;
+    min-height: 100vh;
+    padding-top: 160px;
+    padding-bottom: 100px;
+    color: #fff;
+}
+
+.checkout-form-container {
+    background-color: #0c0c0c;
+    border: 1px solid #222;
+    border-radius: 10px;
+}
+
+.checkout-input {
+    background-color: transparent !important;
+    border: 1px solid #333 !important;
+    color: white !important;
+    padding: 12px 15px !important;
+    border-radius: 4px !important;
+    transition: 0.3s ease;
+}
+
+.checkout-input:focus {
+    border-color: #fd6500 !important;
+    box-shadow: none !important;
+    outline: none;
+}
+
+.checkout-input::placeholder {
+    color: #555;
+}
+
+.payment-box {
+    border: 1px solid #222;
+    background: #080808;
+    border-radius: 8px;
+}
+
+.custom-radio:checked {
+    background-color: #fd6500 !important;
+    border-color: #fd6500 !important;
+}
+
+.order-summary-box {
+    background-color: #0c0c0c;
+    border: 1px solid #fd6500;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.order-items-list {
+    max-height: 350px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+/* Scrollbar dizaynı */
+.order-items-list::-webkit-scrollbar {
+    width: 5px;
+}
+
+.order-items-list::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 10px;
+}
+
+.btn-order-now {
+    width: 100%;
+    padding: 18px;
+    background-color: #fd6500;
+    color: white;
+    border: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.4s;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-order-now:hover {
+    background-color: #e55b00;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(253, 101, 0, 0.2);
+}

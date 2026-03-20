@@ -1,0 +1,85 @@
+.team-section {
+    background-color: #1a1a1a; 
+    padding: 100px 0;
+}
+
+.team-header h2 {
+    color: #fff;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.team-header p {
+    color: #ccc;
+    margin-bottom: 60px;
+}
+
+.team-card {
+    background: transparent;
+    text-align: center;
+    transition: 0.4s;
+}
+
+.team-img-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px; 
+    aspect-ratio: 3/4; 
+    margin-bottom: 20px;
+}
+
+.team-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s transform;
+    filter: grayscale(100%); 
+}
+
+.team-card:hover .team-img {
+    transform: scale(1.1);
+    filter: grayscale(0%);
+}
+
+.team-socials {
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    right: 0;
+    background: rgba(253, 101, 0, 0.9); 
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    transition: 0.4s;
+}
+
+.team-card:hover .team-socials {
+    bottom: 0;
+}
+
+.team-socials i {
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.member-name {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    transition: 0.3s;
+}
+
+.member-role {
+    color: #fd6500;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.team-card:hover .member-name {
+    color: #fd6500;
+}

@@ -1,0 +1,77 @@
+:root {
+  --bg-color: #0c0c0c;
+  --text-color: #ffffff;
+  --orange: #fd6500;
+  --scrollbar-track: #0c0c0c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--orange);
+    border-radius: 10px;
+    border: 2px solid var(--scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ff7b24;
+}
+
+.cursor-dot {
+    width: 6px;
+    height: 6px;
+    background-color: var(--orange);
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 1000000;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cursor-outline {
+    width: 30px;
+    height: 30px;
+    border: 2px solid rgba(253, 101, 0, 0.5);
+    background-color: rgba(253, 101, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 999999;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.15s ease-out; 
+}
+
+.cursor-clicking {
+    transform: translate(-50%, -50%) scale(0.7) !important;
+    background-color: rgba(253, 101, 0, 0.8) !important;
+    border-color: #fff !important;
+}
+
+.cursor-hover {
+    transform: translate(-50%, -50%) scale(1.5);
+    background-color: rgba(253, 101, 0, 0.2);
+    border-color: var(--orange);
+}

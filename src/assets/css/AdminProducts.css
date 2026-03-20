@@ -1,0 +1,81 @@
+.admin-wrapper {
+    background-color: #0a0a0a;
+    min-height: 100vh;
+    padding-top: 140px;
+    padding-bottom: 100px;
+    color: #eee;
+}
+
+.stat-card {
+    background: linear-gradient(145deg, #111, #1a1a1a);
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid #333;
+    transition: 0.3s;
+}
+
+.stat-card-active {
+    background: linear-gradient(145deg, #fd6500, #b54900);
+    padding: 25px;
+    border-radius: 15px;
+    border: none;
+}
+
+.admin-form-card {
+    background-color: #141414;
+    border-radius: 20px;
+    padding: 30px;
+    border: none;
+}
+
+.custom-input {
+    background-color: #1a1a1a !important;
+    border: 1px solid #333 !important;
+    color: white !important;
+    border-radius: 10px !important;
+    padding: 12px 15px !important;
+    transition: 0.3s !important;
+}
+
+.custom-input:focus {
+    border-color: #fd6500 !important;
+    box-shadow: 0 0 10px rgba(253, 101, 0, 0.2) !important;
+    outline: none;
+}
+
+.admin-table-container {
+    background-color: #141414;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid #333;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #1a1a1a !important;
+    transform: scale(1.002);
+    transition: 0.3s;
+}
+
+.btn-orange {
+    background-color: #fd6500;
+    color: white;
+    border-radius: 12px;
+    border: none;
+    transition: 0.3s;
+}
+
+.btn-orange:hover {
+    background-color: #e55b00;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(253, 101, 0, 0.3);
+}
+
+.action-btn {
+    width: 35px;
+    height: 35px;
+    border-radius: 50% !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 !important;
+}

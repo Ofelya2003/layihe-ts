@@ -1,0 +1,31 @@
+.img-zoom-container {
+    overflow: hidden;
+    width: 100%;
+}
+
+.img-zoom-container img {
+    transition: transform 0.5s ease;
+}
+
+.group:hover .img-zoom-container img {
+    transform: scale(1.1);
+}
+
+.shadow-hover:hover {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.animate-card {
+  animation: fadeInUp 0.5s ease-out backwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

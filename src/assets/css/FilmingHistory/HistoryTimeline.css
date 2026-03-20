@@ -1,0 +1,154 @@
+.timeline-section {
+    padding: 100px 0;
+    background-color: #ffffff;
+}
+
+
+.timeline-section .orange-line {
+    width: 35px;
+    height: 2px;
+    background-color: #fd6500;
+}
+
+.timeline-section .orange-label {
+    color: #fd6500;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 13px;
+}
+
+.timeline-section .timeline-main-title {
+    font-size: 44px;
+    font-weight: 800;
+    color: #111111;
+    line-height: 1.2;
+    margin-top: 15px;
+}
+
+.timeline-items {
+    margin-top: 40px;
+}
+
+.timeline-single {
+    position: relative;
+    display: flex;
+}
+
+.timeline-visual {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon-box-main {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: #fff8f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fd6500;
+    font-size: 20px;
+    position: relative;
+    border: 1px solid #fdf2eb;
+}
+
+.mini-check {
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 18px;
+    height: 18px;
+    background: #111111;
+    color: #ffffff;
+    border-radius: 50%;
+    font-size: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.connector-line {
+    width: 1px;
+    flex-grow: 1; 
+    background: #eeeeee;
+    margin: 10px 0;
+}
+
+.timeline-text {
+    padding-bottom: 30px;
+}
+
+.item-year {
+    font-size: 20px;
+    font-weight: 700;
+    color: #111111;
+    margin-bottom: 5px;
+}
+
+.circles-wrapper {
+    position: relative;
+    height: 480px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.big-circle {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 12px solid #ffffff;
+    z-index: 2;
+    box-shadow: 0 15px 45px rgba(0,0,0,0.1);
+}
+
+.small-circle {
+    position: absolute;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 8px solid #ffffff;
+    z-index: 3;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.top-right {
+    width: 130px;
+    height: 130px;
+    top: 20px;
+    right: 30px;
+}
+
+.bottom-left {
+    width: 160px;
+    height: 160px;
+    bottom: 20px;
+    left: 30px;
+}
+
+.circles-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Düymə */
+.btn-orange-more {
+    background: #fd6500;
+    color: #ffffff;
+    border: none;
+    padding: 16px 35px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 13px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-orange-more:hover {
+    background: #000000;
+    transform: translateY(-3px);
+}

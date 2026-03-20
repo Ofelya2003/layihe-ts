@@ -1,0 +1,127 @@
+.movies-foryou-section {
+    background-color: #0c0c0c;
+}
+
+
+.filter-container {
+    position: relative;
+    user-select: none;
+}
+
+.filter-trigger {
+    background: #1a1a1a;
+    color: #888;
+    padding: 10px 25px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 1px solid #333;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.filter-trigger:hover {
+    border-color: #fd6500;
+}
+
+.icon-transition {
+    transition: 0.3s ease;
+}
+
+.icon-transition.rotate {
+    transform: rotate(180deg);
+}
+
+.filter-menu {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background: #151515;
+    border: 1px solid #333;
+    list-style: none;
+    padding: 5px 0;
+    width: 160px;
+    border-radius: 4px;
+    z-index: 999;
+}
+
+.filter-menu li {
+    padding: 10px 20px;
+    color: #999;
+    cursor: pointer;
+    font-size: 13px;
+    transition: 0.2s;
+}
+
+.filter-menu li:hover, .filter-menu li.active {
+    background: #222;
+    color: #fd6500;
+}
+
+
+.mfy-card {
+    border-radius: 6px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.mfy-card:hover {
+    transform: translateY(-12px);
+}
+
+.mfy-img-box {
+    position: relative;
+    height: 380px;
+}
+
+.mfy-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mfy-badge {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0,0,0,0.8);
+    color: white;
+    font-size: 10px;
+    padding: 3px 8px;
+    border-radius: 3px;
+}
+
+.mfy-info {
+    padding: 18px;
+    min-height: 120px;
+}
+
+.mfy-stars {
+    color: #f1c40f;
+    font-size: 11px;
+    margin: 8px 0;
+}
+
+.mfy-stars .empty { color: #eee; }
+
+.mfy-footer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 11px;
+    color: #888;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 10px;
+}
+
+.dot {
+    width: 4px;
+    height: 4px;
+    background: #ddd;
+    border-radius: 50%;
+}
+
+/* Yüklənmə effekti */
+.movie-grid {
+    transition: opacity 0.3s ease;
+}

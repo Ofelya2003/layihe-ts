@@ -1,0 +1,74 @@
+.gallery-page { background-color: #fdfdfd; }
+
+
+.gallery-btn {
+    border: none;
+    background: #f8f9fa;
+    padding: 10px 30px;
+    font-size: 14px;
+    font-weight: 700;
+    transition: 0.4s;
+    border-radius: 50px;
+}
+
+.gallery-btn.active {
+    background: #fd6500;
+    color: white;
+    box-shadow: 0 5px 15px rgba(253, 101, 0, 0.3);
+}
+
+
+.gallery-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.gallery-card:hover {
+    transform: translateY(-10px);
+}
+
+.gallery-img-box {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+}
+
+.gallery-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.6s;
+}
+
+.gallery-card:hover .gallery-img-box img {
+    transform: scale(1.1);
+}
+
+.gallery-badge {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: #fd6500;
+    color: white;
+    padding: 5px 15px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Yazı Hissəsi */
+.read-more-link {
+    color: #fd6500;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 13px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.read-more-link:hover {
+    letter-spacing: 2px;
+}

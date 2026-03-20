@@ -1,0 +1,82 @@
+.video-hero-container {
+    position: relative;
+    width: 100%;
+    height: 90vh; 
+    overflow: hidden;
+    background: #000;
+}
+
+.video-foreground {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.video-foreground iframe {
+    width: 100vw;
+    height: 56.25vw;
+    min-height: 100vh;
+    min-width: 177.77vh;
+}
+
+.video-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, #000 0%, transparent 40%, #000 100%),
+                linear-gradient(to right, rgba(0,0,0,0.8) 0%, transparent 60%);
+    z-index: 1;
+}
+
+.video-text-content {
+    position: relative;
+    z-index: 2;
+    top: 55%;
+    transform: translateY(-50%);
+}
+
+.movie-badge {
+    color: #ff5e00;
+    font-weight: 700;
+    letter-spacing: 2px;
+    border-left: 3px solid #ff5e00;
+    padding-left: 10px;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.imdb-tag {
+    background: #ff5e00;
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 700;
+}
+
+.btn-faime-orange {
+    background: #ff5e00;
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    font-weight: 700;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.btn-faime-outline {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 12px 30px;
+    font-weight: 700;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.btn-faime-outline:hover {
+    background: #fff;
+    color: #000;
+}

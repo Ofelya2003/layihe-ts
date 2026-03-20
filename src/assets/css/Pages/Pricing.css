@@ -1,0 +1,97 @@
+.pricing-page {
+    background-color: #000000;
+}
+
+.page-breadcrumb-area {
+    padding: 160px 0 100px;
+    background-size: cover;
+    background-position: center;
+}
+
+.pricing-toggle-wrapper {
+    background: #111;
+    display: inline-flex;
+    padding: 5px;
+    border-radius: 30px;
+    border: 1px solid #222;
+}
+
+.toggle-btn {
+    background: transparent;
+    border: none;
+    color: #555;
+    padding: 8px 25px;
+    border-radius: 25px;
+    font-size: 12px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.toggle-btn.active {
+    background: #ff3e4d; 
+    color: #fff;
+}
+
+.dark-price-card {
+    background: #000;
+    padding: 50px 30px;
+    border: 1px solid #1a1a1a;
+    transition: 0.4s;
+    border-radius: 10px;
+}
+
+.dark-price-card.featured {
+    background: #080808;
+    border-color: #222;
+    transform: scale(1.05);
+    box-shadow: 0 0 40px rgba(255, 62, 77, 0.1);
+}
+
+.price-value .amount {
+    font-size: 48px;
+    font-weight: 800;
+    color: #fff;
+}
+
+.price-value .currency, .price-value .period {
+    color: #fff;
+    font-weight: 600;
+}
+
+
+.sign-up-btn {
+    background: transparent;
+    border: 1px solid #ff3e4d;
+    color: #ff3e4d;
+    padding: 10px 40px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.dark-price-card.featured .sign-up-btn, .sign-up-btn:hover {
+    background: #ff3e4d;
+    color: #fff;
+}
+
+.include-item {
+    color: #888;
+    font-size: 13px;
+}
+
+.include-item i {
+    color: #ff3e4d;
+}
+
+
+.reveal-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal-up.active {
+    opacity: 1;
+    transform: translateY(0);
+}

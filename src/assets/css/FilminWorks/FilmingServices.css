@@ -1,0 +1,136 @@
+.f-services-area {
+    background-color: #0c0c0c !important;
+    padding: 80px 0;
+    color: #ffffff !important;
+    width: 100%;
+    display: block;
+}
+
+.f-services-title-box .f-subtitle {
+    color: #ff5e00 !important;
+    letter-spacing: 3px;
+    font-size: 13px;
+    display: block;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.f-services-title-box .f-title {
+    font-size: clamp(32px, 4vw, 42px);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 30px;
+    color: #ffffff !important;
+}
+
+.f-round-arrow {
+    width: 70px;
+    height: 70px;
+    border: 1px solid #222;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    transition: 0.4s;
+    cursor: pointer;
+    color: #fff;
+}
+
+.f-round-arrow:hover {
+    background: #ff5e00;
+    border-color: #ff5e00;
+}
+
+.f-services-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.f-service-card {
+    display: flex;
+    align-items: center;
+    padding: 25px 35px;
+    margin-bottom: 15px; 
+    border: 1px solid #1a1a1a;
+    transition: 0.4s;
+    position: relative;
+    cursor: pointer;
+    background-color: #0f0f0f !important; 
+}
+
+.f-service-card:hover {
+    background-color: #161616 !important;
+    border-color: #333;
+    transform: translateY(-3px);
+}
+
+.f-service-number {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 35px;
+    height: 35px;
+    background: linear-gradient(135deg, #ff5e00 50%, transparent 50%);
+    padding: 6px;
+    font-size: 11px;
+    font-weight: 900;
+    color: #000;
+}
+
+.f-service-info {
+    flex: 1;
+    padding-left: 25px;
+}
+
+.f-service-info h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #ffffff !important;
+    margin: 0 0 5px 0;
+}
+
+.f-service-card:hover h3 {
+    color: #ff5e00 !important;
+}
+
+.f-service-info p {
+    color: #777 !important;
+    font-size: 14px;
+    max-width: 450px;
+    margin: 0;
+}
+
+.f-view-btn {
+    background: transparent;
+    border: 1px solid #222;
+    color: #888 !important;
+    padding: 8px 20px;
+    font-size: 12px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.f-service-card:hover .f-view-btn {
+    background: #ffffff;
+    color: #000000 !important;
+    border-color: #ffffff;
+}
+
+
+.f-services-reveal .f-service-card {
+    opacity: 0;
+    transform: translateY(15px);
+    animation: fInUp 0.6s forwards;
+}
+
+.f-services-reveal .f-service-card:nth-child(2) { animation-delay: 0.2s; }
+.f-services-reveal .f-service-card:nth-child(3) { animation-delay: 0.4s; }
+.f-services-reveal .f-service-card:nth-child(4) { animation-delay: 0.6s; }
+
+@keyframes fInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

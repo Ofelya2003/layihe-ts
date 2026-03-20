@@ -1,0 +1,116 @@
+.featured-films-section {
+    background-color:black; 
+    padding: 120px 0; 
+    color: #ffffff;
+}
+
+.featured-subtitle {
+    color: #fd6500; 
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    display: block;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.featured-title {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.featured-films-section .row {
+    row-gap: 80px; 
+}
+
+
+.film-card {
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.film-poster-box {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 2 / 3; 
+    background-color: #1a1a1a; 
+    border-radius: 4px;
+}
+
+.film-poster-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.film-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(253, 101, 0, 0.25); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.4s ease;
+}
+
+.film-overlay i {
+    font-size: 45px;
+    color: #ffffff;
+}
+
+.film-card:hover .film-poster-img {
+    transform: scale(1.1);
+}
+
+.film-card:hover .film-overlay {
+    opacity: 1;
+}
+
+.film-card:hover .film-name {
+    color: #fd6500;
+}
+
+
+.film-info {
+    margin-top: 25px;
+    padding-left: 5px;
+}
+
+.film-category {
+    color: #fd6500;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.film-name {
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffffff;
+    transition: 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+@media (min-width: 992px) {
+    .offset-y {
+        transform: translateY(60px);
+    }
+}
+
+@media (max-width: 991px) {
+    .featured-title {
+        font-size: 36px;
+    }
+    .featured-films-section {
+        padding: 80px 0;
+    }
+}

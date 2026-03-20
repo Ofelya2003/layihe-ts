@@ -1,0 +1,203 @@
+.about-breadcrumb-area {
+    padding: 180px 0 100px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+}
+
+.about-breadcrumb-area::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); 
+    z-index: -1;
+}
+
+.reveal-up {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: transform, opacity;
+}
+
+.reveal-up.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.about-main-img {
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+    border: 1px solid #222;
+    transition: 0.6s ease;
+}
+
+.about-img-box:hover .about-main-img {
+    transform: scale(1.03);
+}
+
+.about-corner-decoration {
+    position: absolute;
+    bottom: -15px;
+    right: -15px;
+    width: 80px;
+    height: 80px;
+    border-bottom: 5px solid #fd6500;
+    border-right: 5px solid #fd6500;
+    z-index: -1;
+}
+
+.progress {
+    background-color: #111 !important;
+    overflow: visible;
+}
+
+.progress-bar {
+    position: relative;
+    overflow: visible;
+    transition: width 1.5s ease-in-out;
+}
+
+.stat-box {
+    padding: 40px 20px;
+    background: #0c0c0c;
+    border: 1px solid #1a1a1a;
+    transition: 0.4s ease;
+}
+
+.stat-box:hover {
+    border-color: #fd6500;
+    transform: translateY(-10px);
+    background: #111;
+}
+
+.stat-number {
+    font-size: 42px;
+    font-weight: 800;
+    color: #fd6500;
+    margin-bottom: 5px;
+}
+
+.team-img-wrapper {
+    overflow: hidden;
+    border: 1px solid #1a1a1a;
+    background-color: #000;
+}
+
+.team-img-wrapper img {
+    filter: grayscale(100%);
+    transition: 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    height: 420px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.team-card:hover img {
+    filter: grayscale(0%); 
+    transform: scale(1.1);
+}
+
+.team-card h5 {
+    color: #fff;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.team-card:hover h5 {
+    color: #fd6500;
+}
+
+.partner-logo h5 {
+    color: #333;
+    font-weight: 900;
+    letter-spacing: 3px;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+.partner-logo h5:hover {
+    color: #fd6500;
+    transform: scale(1.1);
+}
+
+/* --- 8. Düymə (CTA) --- */
+.cta-btn {
+    background-color: #fd6500;
+    color: #fff;
+    border: 1px solid #fd6500;
+    transition: 0.4s;
+}
+
+.cta-btn:hover {
+    background-color: transparent;
+    color: #fd6500;
+}
+
+/* --- 9. Responsive (Mobil) --- */
+@media (max-width: 991px) {
+    .about-main-img {
+        height: 400px;
+    }
+    .display-3 {
+        font-size: 2.5rem;
+    }
+    .stat-number {
+        font-size: 32px;
+    }
+}
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-100px); 
+    transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.reveal-left.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.partner-slider {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    padding: 20px 0;
+}
+
+.partner-track {
+    display: flex;
+    width: calc(250px * 12); 
+    animation: scrollInfinite 20s linear infinite; 
+}
+
+.partner-track span {
+    width: 250px;
+    font-size: 24px;
+    font-weight: 900;
+    color: #333;
+    text-align: center;
+    transition: 0.3s;
+    letter-spacing: 5px;
+    display: inline-block;
+}
+
+.partner-track span:hover {
+    color: #fd6500;
+    cursor: pointer;
+}
+
+
+@keyframes scrollInfinite {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-250px * 6)); 
+    }
+}

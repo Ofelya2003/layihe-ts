@@ -1,0 +1,119 @@
+
+:root {
+    --bg-dark: #0c0c0c;
+    --bg-card: #141414;
+    --text-main: #ffffff;
+    --text-muted: #b0b0b0;
+    --orange: #fd6500;
+    --border-color: #222222;
+}
+
+html, body {
+    background-color: var(--bg-dark) !important;
+    color: var(--text-main) !important;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--orange);
+    border-radius: 10px;
+    border: 2px solid var(--bg-dark);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ff7b24;
+}
+
+.cursor-dot {
+    width: 6px; height: 6px; background-color: var(--orange);
+    position: fixed; top: 0; left: 0; pointer-events: none;
+    z-index: 1000000; border-radius: 50%; transform: translate(-50%, -50%);
+}
+
+.cursor-outline {
+    width: 30px; height: 30px; border: 2px solid rgba(253, 101, 0, 0.5);
+    background-color: rgba(253, 101, 0, 0.1);
+    position: fixed; top: 0; left: 0; pointer-events: none;
+    z-index: 999999; border-radius: 50%; transform: translate(-50%, -50%);
+    transition: transform 0.15s ease-out; 
+}
+
+.cursor-clicking {
+    transform: translate(-50%, -50%) scale(0.7) !important;
+    background-color: rgba(253, 101, 0, 0.8) !important;
+    border-color: #fff !important;
+}
+
+.portfolio-details-page {
+    background-color: var(--bg-dark) !important;
+}
+
+.page-breadcrumb-area {
+    padding-top: 220px !important; 
+    padding-bottom: 120px !important;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 5;
+}
+
+.project-info-sidebar {
+    background: var(--bg-card) !important;
+    border: 1px solid var(--border-color) !important;
+    padding: 30px;
+    border-radius: 10px;
+    position: sticky;
+    top: 120px;
+}
+
+.project-info-sidebar span, 
+.project-info-sidebar .text-dark,
+.project-story h2, 
+.project-story h4, 
+h1, h2, h3 {
+    color: var(--text-main) !important;
+}
+
+.project-story p, .text-muted {
+    color: var(--text-muted) !important;
+}
+
+.blog-standard-container, .service-page, .admin-wrapper {
+    background-color: var(--bg-dark) !important;
+}
+
+.category-widget, .sidebar-widget, .step-card {
+    background-color: var(--bg-card) !important;
+    border: 1px solid var(--border-color) !important;
+    color: var(--text-main) !important;
+}
+
+input, textarea, select {
+    background-color: #1a1a1a !important;
+    border: 1px solid var(--border-color) !important;
+    color: #fff !important;
+}
+
+.custom-sidebar {
+    background-color: #0b0e14 !important;
+    border-right: 1px solid var(--border-color);
+}
+
+.sidebar-link {
+    color: var(--text-main) !important;
+}
+
+.sidebar-link:hover {
+    color: var(--orange) !important;
+}

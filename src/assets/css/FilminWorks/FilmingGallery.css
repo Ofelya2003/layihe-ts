@@ -1,0 +1,105 @@
+.f-gallery-section {
+    background-color: #0c0c0c;
+    padding: 100px 0;
+    color: #fff;
+    overflow: hidden;
+}
+
+.f-gallery-header { margin-bottom: 80px; }
+.f-gallery-header .f-subtitle { color: #ff5e00; letter-spacing: 3px; font-weight: 700; }
+.f-gallery-header .f-title { font-size: 50px; font-weight: 800; margin-top: 10px; }
+
+.f-gallery-item {
+    position: relative;
+    height: 480px; 
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.last-item-size {
+    max-width: 450px; 
+}
+
+.f-gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.8s ease;
+}
+
+.last-row-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 40px; 
+}
+
+.f-spinning-btn-box {
+    min-width: 160px;
+    cursor: pointer;
+}
+
+.f-spinning-container {
+    position: relative;
+    width: 160px;
+    height: 160px;
+}
+
+.f-spinning-svg {
+    width: 100%;
+    height: 100%;
+    animation: fSpin 12s linear infinite;
+}
+
+@keyframes fSpin { from {transform: rotate(0deg)} to {transform: rotate(360deg)} }
+
+.spinning-text {
+    fill: #666;
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.f-arrow-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 55px;
+    height: 55px;
+    background: #ff5e00;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 22px;
+}
+
+.f-gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, transparent 60%);
+    display: flex;
+    align-items: flex-end;
+    padding: 30px;
+    opacity: 0;
+    transition: 0.4s ease;
+}
+
+.f-gallery-item:hover .f-gallery-overlay { opacity: 1; }
+.f-gallery-item:hover img { transform: scale(1.1); }
+
+.f-cat { color: #ff5e00; font-size: 12px; font-weight: 700; }
+.f-proj-title { font-size: 24px; font-weight: 800; }
+
+
+@media (max-width: 991px) {
+    .last-row-container { flex-direction: column; text-align: center; }
+    .f-gallery-item { height: 350px; }
+}

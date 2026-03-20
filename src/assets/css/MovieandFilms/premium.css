@@ -1,0 +1,115 @@
+.premium-section {
+    background-color: #0c0c0c;
+    padding: 80px 0;
+}
+
+.premium-main-title {
+    color: white;
+    font-weight: 800;
+    font-size: 32px;
+}
+
+
+.premium-card-custom {
+    background: white;
+    border-radius: 4px; 
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.premium-card-custom:hover {
+    transform: translateY(-10px);
+}
+
+/* Şəkil hissəsi */
+.card-top {
+    position: relative;
+    height: 320px;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.crown-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #fd6500;
+    color: white;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.duration-label {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background: rgba(0,0,0,0.8);
+    color: white;
+    font-size: 9px;
+    padding: 2px 5px;
+}
+
+/* Ağ blok hissəsi */
+.card-bottom-info {
+    padding: 15px;
+    background: white;
+}
+
+.movie-name {
+    color: #000;
+    font-weight: 700;
+    margin-bottom: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.stars-row {
+    color: #f1c40f;
+    font-size: 11px;
+    margin-bottom: 8px;
+    display: flex;
+    gap: 2px;
+}
+
+.stars-row .empty {
+    color: #ddd;
+}
+
+.stats-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #888;
+    font-size: 11px;
+    border-top: 1px solid #eee;
+    padding-top: 8px;
+}
+
+/* Naviqasiya elementləri */
+.view-all-text {
+    color: #888;
+    background: none;
+    border: none;
+    font-size: 14px;
+}
+
+.arrow-btn {
+    background: #1a1a1a;
+    border: none;
+    color: #555;
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+    font-size: 12px;
+}

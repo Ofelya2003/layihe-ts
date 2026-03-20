@@ -1,0 +1,129 @@
+.filming-hero-wrapper {
+    background-color: #0c0c0c; 
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    color: #ffffff;
+}
+
+.side-follow {
+    position: absolute;
+    left: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    z-index: 10;
+}
+
+.follow-text {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #666;
+}
+
+.follow-line {
+    width: 1px;
+    height: 50px;
+    background-color: #333;
+}
+
+.arch-image-box img {
+    width: 100%;
+    height: 75vh;
+    object-fit: cover;
+    border-radius: 500px 500px 0 0; 
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), filter 0.5s ease;
+}
+
+.from-left img {
+    filter: brightness(0.8);
+}
+
+.from-right img {
+    filter: grayscale(100%) brightness(0.6);
+    margin-top: 60px; 
+}
+
+.hero-text-content {
+    position: relative;
+    z-index: 5;
+}
+
+.director-tag {
+    font-size: 11px;
+    letter-spacing: 6px;
+    color: #888;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.main-hero-title {
+    font-size: clamp(50px, 9vw, 110px); 
+    font-weight: 900;
+    line-height: 0.82;
+    letter-spacing: -4px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.hero-subtext {
+    max-width: 500px;
+    margin: 0 auto 45px;
+    font-size: 16px;
+    color: #999;
+    line-height: 1.7;
+}
+
+.faime-explore-btn {
+    background: transparent;
+    color: #fff;
+    border: 1px solid #333;
+    padding: 18px 50px;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: 0.4s all ease;
+}
+
+.faime-explore-btn:hover {
+    background: #ffffff;
+    color: #000000;
+    border-color: #ffffff;
+}
+
+
+.anim-element {
+    opacity: 0;
+    transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.from-right, .from-right-fast, .from-right-slow {
+    transform: translateX(120px);
+}
+
+.from-left {
+    transform: translateX(-120px);
+}
+
+.active-animation {
+    opacity: 1;
+    transform: translateX(0) !important;
+}
+
+.from-right-fast.active-animation { transition-delay: 0.1s; }
+.from-right-slow.active-animation { transition-delay: 0.4s; }
+
+@media (max-width: 991px) {
+    .main-hero-title { font-size: 60px; letter-spacing: -2px; }
+    .arch-image-box img { height: 50vh; }
+    .side-follow { display: none; }
+}

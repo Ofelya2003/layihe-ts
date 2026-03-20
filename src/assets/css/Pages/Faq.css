@@ -1,0 +1,146 @@
+.faq-breadcrumb-area {
+    padding: 200px 0 100px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), 
+                      url('../../assets/image/backgroundpages.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll; 
+    position: relative;
+    z-index: 1;
+}
+.breadcrumb-nav {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.text-orange {
+    color: #fd6500;
+}
+
+.faq-main-content {
+    background-color: #000;
+    min-height: 600px;
+}
+
+.faq-subtitle {
+    color: #fd6500;
+    letter-spacing: 4px;
+    font-weight: 800;
+    font-size: 13px;
+}
+
+.faq-glow-effect {
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(253, 101, 0, 0.1) 0%, transparent 70%);
+    filter: blur(60px);
+    z-index: 0;
+}
+
+
+.contact-info-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    position: relative;
+    z-index: 1;
+}
+
+.contact-icon-box {
+    width: 45px;
+    height: 45px;
+    background: rgba(253, 101, 0, 0.1);
+    color: #fd6500;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+
+.faq-card-item {
+    background: #0d0d0d;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.faq-card-item:hover {
+    border-color: rgba(253, 101, 0, 0.3);
+}
+
+.faq-question-row {
+    padding: 22px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-q-text {
+    color: white;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.faq-toggle-btn {
+    width: 35px;
+    height: 35px;
+    background: #fd6500;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+.faq-card-item.is-active {
+    background: #121212;
+    border-color: #fd6500;
+}
+
+.faq-card-item.is-active .faq-toggle-btn {
+    transform: rotate(180deg);
+}
+
+.faq-answer-row {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+.faq-card-item.is-active .faq-answer-row {
+    max-height: 200px;
+}
+
+.faq-answer-content {
+    padding: 0 25px 25px;
+    color: #888;
+    line-height: 1.6;
+}
+
+.btn-faime-orange {
+    background: #fd6500;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.btn-faime-orange:hover {
+    background: white;
+    color: black;
+}

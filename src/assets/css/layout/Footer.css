@@ -1,0 +1,129 @@
+.footer-area {
+  background-color: #000;
+  border-top: 1px solid #1a1a1a;
+  color: #fff;
+  position: relative;
+  padding-top: 40px; 
+}
+
+.widget-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 35px;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.widget-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 45px;
+  height: 2px;
+  background: #fd6500;
+}
+
+
+.footer-text {
+  color: #a0a0a0;
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+.gallery-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.gallery-box img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 4px;
+  filter: grayscale(100%);
+  transition: 0.4s;
+}
+
+.gallery-box img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+
+.social-flex {
+  display: flex;
+  gap: 15px;
+}
+
+.s-link {
+  width: 42px;
+  height: 42px;
+  border: 1px solid #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #fff;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.s-link:hover {
+  background: #fd6500;
+  border-color: #fd6500;
+  transform: translateY(-5px);
+}
+
+/* Əlaqə mətni */
+.contact-info p {
+  color: #a0a0a0;
+  font-size: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.contact-info i {
+  color: #fd6500;
+  margin-top: 4px;
+}
+
+/* Copyright Hissəsi */
+.footer-bottom {
+  margin-top: 80px;
+  padding-top: 30px;
+  border-top: 1px solid #1a1a1a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  color: #666;
+}
+
+.bottom-links a {
+  color: #666;
+  text-decoration: none;
+  margin-left: 20px;
+  transition: 0.3s;
+}
+
+.bottom-links a:hover {
+  color: #fd6500;
+}
+
+/* Scroll Top */
+.go-top {
+  position: absolute;
+  right: 40px;
+  top: -25px;
+  width: 50px;
+  height: 50px;
+  background: #fd6500;
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  box-shadow: 0 5px 15px rgba(253, 101, 0, 0.4);
+  cursor: pointer;
+}
