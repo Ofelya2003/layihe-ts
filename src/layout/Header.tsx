@@ -5,10 +5,13 @@ import { changeLang } from "../store/features/lang/lang";
 import StaticLang from "../utils/StaticLang";
 import logo from "../assets/image/logo.png";
 import Sidebar from "../components/Sidebar";
+import MobileMenu from "../components/MobileMenu"; 
 import "../assets/css/layout/Header.css";
 
 const Header: React.FC = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); 
+  
   const location = useLocation();
   const navigate = useNavigate();
   
@@ -27,6 +30,9 @@ const Header: React.FC = () => {
   return (
     <>
       <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
+      
+      {/* Mobil menyu komponentin */}
+      <MobileMenu isOpen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} />
 
       <nav className={`navbar navbar-expand-lg ${headerClass}`}>
         <div className="container">
@@ -44,14 +50,19 @@ const Header: React.FC = () => {
             </button>
           </div>
 
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
-            <span className="navbar-toggler-icon"></span>
+          {/* Hamburger düyməsi (Yalnız mobildə görünür) */}
+          <button 
+            className="navbar-toggler border-0 shadow-none d-lg-none" 
+            type="button" 
+            onClick={() => setIsMobileMenuOpen(true)}
+          >
+            <i className="fa-solid fa-bars-staggered text-white fs-1"></i>
           </button>
 
-          <div className="collapse navbar-collapse" id="mainNavbar">
+          {/* DÜZƏLİŞ BURADADIR: d-none d-lg-block əlavə edildi ki, şəkildəki o göy siyahı mobildə yox olsun */}
+         <div className="collapse navbar-collapse d-none d-lg-block" id="mainNavbar">
             <ul className="navbar-nav mx-auto gap-lg-4 gap-2">
               
-              {/* ANA SƏHİFƏ */}
               <li className="nav-item dropdown">
                 <NavLink to="/" className="nav-link">
                    <StaticLang az="Ana Səhifə" en="Home" ru="Главная" />
@@ -63,7 +74,6 @@ const Header: React.FC = () => {
                 </ul>
               </li>
 
-              
               <li className="nav-item dropdown">
                 <NavLink to="/movie" className="nav-link">
                    <StaticLang az="Filmlər" en="Movies" ru="Фильмы" />
@@ -74,7 +84,6 @@ const Header: React.FC = () => {
                 </ul>
               </li>
 
-             
               <li className="nav-item dropdown">
                 <NavLink to="/portfolio" className="nav-link">
                    <StaticLang az="Portfoliо" en="Portfolio" ru="Портфолио" />
@@ -85,7 +94,6 @@ const Header: React.FC = () => {
                 </ul>
               </li>
 
-              
               <li className="nav-item dropdown position-static">
                 <NavLink to="/pages" className="nav-link">
                    <StaticLang az="Səhifələr" en="Pages" ru="Страницы" />
@@ -118,7 +126,6 @@ const Header: React.FC = () => {
                 </ul>
               </li>
 
-              
               <li className="nav-item dropdown">
                 <NavLink to="/blog" className="nav-link">
                    <StaticLang az="Bloq" en="Blog" ru="Блог" />
@@ -130,7 +137,6 @@ const Header: React.FC = () => {
                 </ul>
               </li>
 
-             
               <li className="nav-item me-lg-4">
                 <NavLink to="/contact" className="nav-link">
                    <StaticLang az="Əlaqə" en="Contact" ru="Контакты" />
@@ -138,7 +144,6 @@ const Header: React.FC = () => {
               </li>
             </ul>
 
-           
             <div className="d-flex align-items-center me-3">
               <i className="bi bi-globe2 me-2" style={{ color: "#fd6500" }}></i>
               <select 

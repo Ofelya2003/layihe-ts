@@ -1,19 +1,24 @@
+/* SİDEBAR ANA KONTEYNER */
 .custom-sidebar {
   position: fixed;
   top: 0;
-  left: -100%; 
-  width: 400px;
+  left: -100%; /* Gizli vəziyyət */
+  width: 300px; /* Kompüterdə genişlik */
   height: 100vh;
   background-color: #0b0e14;
-  z-index: 9999;
-  transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  border-right: 1px solid #1e2229;
+  z-index: 10001; /* Hər şeyin, hətta Navbarın da üstündə olmalıdır */
+  transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1); /* Səlis açılış */
+  border-right: 1px solid rgba(253, 101, 0, 0.2);
+  box-shadow: 10px 0 30px rgba(0, 0, 0, 0.5);
+  overflow-y: auto; /* İçindəkilər çox olsa, aşağı çəkmək olsun */
 }
 
+/* SİDEBAR AÇIQ OLANDA */
 .custom-sidebar.open {
-  left: 0; 
+  left: 0 !important;
 }
 
+/* QARA ÖRTÜK (OVERLAY) */
 .sidebar-overlay {
   position: fixed;
   top: 0;
@@ -21,10 +26,11 @@
   width: 100vw;
   height: 100vh;
   background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px); /* Arxa fonu bulandıran modern effekt */
   visibility: hidden;
   opacity: 0;
-  z-index: 9998;
-  transition: 0.3s;
+  z-index: 10000;
+  transition: 0.4s;
 }
 
 .sidebar-overlay.active {
@@ -32,24 +38,84 @@
   opacity: 1;
 }
 
-.close-sidebar-btn {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 30px;
-  cursor: pointer;
+/* SİDEBAR BAŞLIĞI */
+.sidebar-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 25px !important;
 }
 
-.sidebar-link {
-  display: block;
-  padding: 12px 15px;
-  color: #adb5bd;
-  text-decoration: none;
-  border-radius: 8px;
+.close-sidebar-btn {
+  background: rgba(253, 101, 0, 0.1);
+  border: none;
+  color: #fd6500;
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: 0.3s;
+}
+
+.close-sidebar-btn:hover {
+  background: #fd6500;
+  color: white;
+  transform: rotate(90deg);
+}
+
+/* MENYU QRUPLARI */
+.menu-group {
+  margin-bottom: 30px;
+}
+
+.menu-group p {
+  color: #fd6500 !important;
+  font-size: 11px !important;
+  margin-bottom: 15px !important;
+  padding-left: 10px;
+}
+
+/* LİNKLƏRİN GÖRÜNÜŞÜ */
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  color: #ffffff !important;
+  text-decoration: none !important;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  transition: 0.3s all ease;
+}
+
+.sidebar-link i {
+  width: 25px;
+  color: #fd6500;
+  font-size: 18px;
 }
 
 .sidebar-link:hover {
   background: rgba(253, 101, 0, 0.1);
-  color: #fd6500;
+  padding-left: 20px;
+  color: #fd6500 !important;
+}
+
+/* 📱 MOBİL ÜÇÜN ÖZƏL ÖLÇÜ (Ən vacib hissə) */
+@media (max-width: 576px) {
+    .custom-sidebar {
+        width: 85%; /* Telefonda ekranın çoxunu tutsun, amma hamısını yox */
+    }
+}
+
+/* ÇIXIŞ DÜYMƏSİ */
+.btn-link.text-danger {
+    padding-left: 15px !important;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.btn-link.text-danger:hover {
+    letter-spacing: 1px;
 }
